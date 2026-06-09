@@ -7,11 +7,14 @@ const app = express();
 app.use(express.json());
 app.use(express.static(__dirname));
 
-const db = mysql.createConnection({
+const db = mysql.createPool({ 
     host: process.env.DB_HOST || 'localhost', 
     user: process.env.DB_USER || 'root', 
     password: process.env.DB_PASSWORD || 'senha_utilizada', 
     database: process.env.DB_NAME || 'hospedagem',
+    waitForConnections: true,
+    connectionLimit: 4,
+    queueLimit: 0,
     multipleStatements: true
 });
 
