@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" type="image/png" href="images/icon_hotel.png">
+    <title>Hotel Campos Gerais</title>
+</head>
+<body>
+    <div class="tela_inicial">
+        <header>
+            <div class="img_head">
+                <img src="images/icon_hotel.png">
+            </div>
+            <div class="titulo_head">
+                <h1>Hotel Campos Gerais</h1>
+            </div>
+            <div class="botoes_head">
+                <button onclick="mostrarLogin()" class="redir_log"><p>LOGIN</p></button>
+                <button onclick="mostrarCadastro()" class="redir_cad"><p>CADASTRAR</p></button>
+            </div>
+        </header>
+        <div class="infos">
+            <div class="intro">
+                <h2>Conforto em um só lugar</h2>
+                <div class="intro_img">
+                    <img src="images/hotel_1.png"><img src="images/hotel_2.png">
+                </div>
+            </div>
+            <div class="quartos">
+                <h2>Confira os quartos disponíveis</h2>
+                <h3 class="tipo_qrt"></h3>
+                <div class="img_quartos">
+                    <div class="qrt1"><img src="images/standard.png"></div>
+                    <div class="qrt2"><img src="images/superior.png"></div>
+                    <div class="qrt3"><img src="images/premium.png"></div>
+                    <div class="qrt4"><img src="images/luxo.png"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="form_cadastro" method="POST" onsubmit="fazerCadastro(event)" style="display: none">
+        <div class="logo">
+            <div class="img_login"><img src="images/icon_hotel.png"></div>
+            <div class="titulo_login"><h1>Hotel Campos Gerais</h1></div>
+        </div>
+        <div class="texto_login"><h1>Novo Cadastro</h1></div>
+        <div class="campo_digit">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira seu nome completo aqui" required>
+        </div>
+        <div class="campo_digit">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Insira seu email aqui" required>
+        </div>
+        <div class="campo_digit">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Insira sua senha aqui" required>
+        </div>
+        <div class="campo_digit">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" placeholder="Insira seu CEP aqui" onblur="buscarEndereco()" required>
+        </div>
+        <div class="valores_cep">
+            <p class="desc">Rua<p>
+            <div class="rua"><p></p></div>
+        </div>
+        <div class="valores_cep">
+            <p class="desc">Bairro<p>
+            <div class="bairro"><p></p></div>
+        </div>
+        <div class="valores_cep">
+            <p class="desc">Cidade<p>
+            <div class="cidade"><p></p></div>
+        </div>
+        <div class="botoes">
+            <button class="bt_login" type="submit">CADASTRAR</button>
+            <button class="bt_voltar" type="reset" onclick="mostrarTelaIni()">VOLTAR</button>
+        </div>
+    </form>
+    <form class="form_login" method="POST" onsubmit="fazerLogin(event)" style="display: none">
+        <div class="logo">
+            <div class="img_login"><img src="images/icon_hotel.png"></div>
+            <div class="titulo_login"><h1>Hotel Campos Gerais</h1></div>
+        </div>
+        <div class="texto_login"><h1>Fazer login da conta</h1></div>
+        <div class="campo_digit">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Insira seu email aqui" required>
+        </div>
+        <div class="campo_digit">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Insira sua senha aqui" required>
+        </div>
+        <div class="botoes">
+            <button class="bt_login" type="submit">ENTRAR</button>
+            <button class="bt_voltar" type="reset" onclick="mostrarTelaIni()">VOLTAR</button>
+        </div>
+    </form>
+    <form class="form_reserva" method="POST" onsubmit="fazerReserva(event)" style="display: none">
+        <header>
+            <div class="img_head">
+                <img src="images/icon_hotel.png">
+            </div>
+            <div class="titulo_head">
+                <h1>Hotel Campos Gerais</h1>
+            </div>
+            <div class="user_info">
+                <h1></h1>
+                <button class="bt_sair" type="reset" onclick="fazerLogout()">SAIR DA CONTA</button>
+            </div>
+            <div class="botoes_head">
+                <div class="bloco_atual"><p>NOVA RESERVA</p></div>
+                <button type="reset" onclick="listarReservas()"><p>SUAS RESERVAS</p></button>
+            </div>
+        </header>
+        <div class="main_reser">
+            <div class="reservas">
+                <div class="titulo_form">
+                    <h2>Informações da nova reserva</h2>
+                </div>
+                <div class="quarto_conj">
+                    <div class="qrt_selec">
+                        <label for="quarto">Quarto</label>
+                        <select id="quarto" name="quarto" onchange="trocarQuarto()">
+                            <option value="Standard" selected>Standard</option>
+                            <option value="Superior">Superior</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Luxo">Luxo</option>
+                        </select>
+                    </div>
+                    <div class="img_selec"><img class="img_qrt" src="images/standard.png"></div>
+                </div>
+                <div class="datas">
+                    <div class="campo_digit">
+                        <label for="data_ini">Data de Entrada</label>
+                        <input type="date" id="data_ini" name="data_ini" min="2026-06-01" required>
+                    </div>
+                    <div class="campo_digit">
+                        <label for="data_fim">Data de Saída</label>
+                        <input type="date" id="data_fim" name="data_fim" min="2026-06-01" required>
+                    </div>
+                </div>
+                <div class="campo_digit">
+                    <label for="qtd">Quantidade de pessoas</label>
+                    <input type="number" value="1" id="qtd" name="qtd" min="1" max="5" required>
+                </div>
+            </div>
+            <div class="fim_reserva">
+                <div class="total"><p>Total: R$ 0,00</p></div>
+                <button class="bt_reservar" type="submit">CONFIRMAR RESERVA</button>
+            </div>
+        </div>
+    </form>
+    <div class="lista_reservas" style="display: none">
+        <header>
+            <div class="img_head">
+                <img src="images/icon_hotel.png">
+            </div>
+            <div class="titulo_head">
+                <h1>Hotel Campos Gerais</h1>
+            </div>
+            <div class="user_info">
+                <h1></h1>
+                <button class="bt_sair" type="reset" onclick="fazerLogout()">SAIR DA CONTA</button>
+            </div>
+            <div class="botoes_head">
+                <button onclick="mostrarMenuLogado()"><p>NOVA RESERVA</p></button>
+                <div class="bloco_atual"><p>SUAS RESERVAS</p></div>
+            </div>
+        </header>
+        <div class="corpo_reservas">
+            <div class="titulo_form">
+                <h2>Lista de reservas feitas</h2>
+            </div>
+            <div class="reservas_encon"></div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+body {
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.tela_inicial{
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 25vh;
+    width: 100%;
+}
+.img_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    height: 90%;
+    width: 20%;
+}
+.img_head img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+.titulo_head {
+    border-radius: 1rem;
+    width: 73%;
+    margin: 0.5%;
+}
+.titulo_head h1 {
+    color: black;
+    font-size: 4rem;
+    font-family: 'Trebuchet MS';
+}
+.botoes_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    gap: 1rem;
+}
+.botoes_head button {
+    min-height: 3rem;
+    width: 60%;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+    cursor: pointer;
+}
+.botoes_head button:hover{
+    background-color: lightblue;
+    color: black;
+    border: 2px solid black;
+}
+.infos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: skyblue;
+}
+.infos h2 {
+    margin-left: 2%;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: black;
+}
+.intro_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1%;
+}
+.intro img {
+    object-fit: cover;
+    width: 40%;
+    height: auto;
+}
+.quartos {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 145, 189);
+}
+.tipo_qrt{
+    height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS';
+    color: white;
+}
+.img_quartos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-self: center;
+    width: 70%;
+    margin: 2rem;
+    gap: 3%;
+}
+.img_quartos img {
+    object-fit: cover;
+    width: 100%;
+    height: 18rem;
+    border-radius: 0.5rem;
+}
+}
+
+.form_login, .form_cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-height: 50vh;
+    background-color: lightblue;
+    margin: 10vh auto;
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 3%;
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.img_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    height: 90%;
+    width: 20%;
+}
+
+.img_login img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.titulo_login{
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS';
+}
+
+.texto_login{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+    margin: 3rem;
+}
+.campo_digit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 4rem;
+    margin-bottom: 1rem;
+}
+label, .desc{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+    width: 100%;
+    margin-bottom: 1rem;
+}
+input{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+    min-height: 2.5rem;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+.botoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    width: 8rem;
+    min-height: 2rem;
+    margin: 5%;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS';
+    background-color: rgb(80, 80, 255);
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(40, 40, 255);
+    color: white;
+    border: 2px solid black;
+}
+.rua p, .bairro p, .cidade p{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: darkgray;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+    min-height: 2.5rem;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+}
+
+.form_reserva, .lista_reservas{
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 25vh;
+    width: 100%;
+}
+.img_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    height: 90%;
+    width: 20%;
+}
+.img_head img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+.titulo_head {
+    border-radius: 1rem;
+    width: 73%;
+    margin: 0.5%;
+}
+.titulo_head h1 {
+    color: black;
+    font-size: 4rem;
+    font-family: 'Trebuchet MS';
+}
+.user_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    max-height: 2rem;
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 3%;
+}
+.user_info h1{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+}
+.botoes_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    gap: 1rem;
+}
+.botoes_head button {
+    min-height: 3rem;
+    width: 60%;
+    background-color: rgb(80, 80, 255);
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+    cursor: pointer;
+}
+.botoes_head button:hover{
+    background-color: lightblue;
+    color: black;
+    border: 2px solid black;
+}
+.bloco_atual{
+    text-align: center;
+    min-height: 3rem;
+    width: 60%;
+    background-color: darkgray;
+    color: white;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+    border: 2px solid black;
+}
+.titulo_form{
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS';
+    margin-bottom: 5vh;
+}
+.campo_digit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 4rem;
+    margin-bottom: 1rem;
+}
+.reservas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-height: 10vh;
+    background-color: lightblue;
+    margin: 10vh auto;
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 3%;
+}
+.img_selec{
+    height: 60%;
+    width: 80%;
+    margin-bottom: 8vh;
+}
+.img_qrt {
+    object-fit: fill;
+    width: 100%;
+    height: 18rem;
+    border-radius: 0.5rem;
+}
+.quarto_conj{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    min-height: 10vh;
+    gap: 3%;
+}
+.qrt_selec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    width: 20%;
+}
+.datas{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-bottom: 5vh;
+}
+.main_reser{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+}
+.fim_reserva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    max-height: 15vh;
+    background-color: rgb(69, 72, 255);
+    margin: 10vh auto;
+    border: 3px solid black ;
+    border-radius: 1rem;
+    padding: 3%;
+}
+label{
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS';
+    width: 100%;
+    margin-bottom: 1rem;
+}
+input, select{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+    min-height: 2.5rem;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+#qtd{
+    width: 20%;
+}
+.bt_sair, .reserva button{
+    min-height: 2rem;
+    width: 70%;
+    background-color: rgb(255, 0, 0);
+    color: black;
+    font-family: 'Trebuchet MS';
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.bt_sair:hover, .reserva button:hover{
+    background-color: rgb(165, 0, 0);
+    color: white;
+    border: 2px solid black;
+}
+.total{
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS';
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.bt_reservar{
+    min-height: 3rem;
+    width: 60%;
+    background-color: rgb(43, 255, 0);
+    color: black;
+    font-family: 'Trebuchet MS';
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.bt_reservar:hover{
+    background-color: rgb(20, 121, 0);
+    color: white;
+    border: 2px solid black;
+}
+.reserva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 10vh;
+    background-color: lightblue;
+    margin: 10vh auto;
+    border: 3px solid black;
+    border-radius: 1rem;
+    padding: 3%;
+}
+.reserva p{
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS';
+    width: 100%;
+    min-height: 7vh;
+    line-height: 5vh;
+}
+.reserva .atributo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 10%;
+}
+.corpo_reservas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+.reservas_encon{
+    width: 70%;
+}
+.aviso{
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS';
+    margin-bottom: 5vh;
+    width: 100%;
+    min-height: 70vh;
+}
+}
